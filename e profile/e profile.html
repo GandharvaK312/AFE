@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandharva C Kulkarni | Systems & Quant Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modern Minimalist Injections */
+        body {
+            background-color: #0a0b0e;
+        }
+        .skill-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .skill-card .subdomains {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+        .skill-card:hover .subdomains {
+            max-height: 120px;
+            opacity: 0.85;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="text-zinc-300 font-sans antialiased selection:bg-cyan-400 selection:text-black tracking-tight">
+
+    <div class="pointer-events-none fixed inset-0 z-40 h-full w-full bg-[linear-gradient(to_right,#1f29370a_1px,transparent_1px),linear-gradient(to_bottom,#1f29370a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0b0e]/75 backdrop-blur-xl border-b border-zinc-800/40">
+        <div class="max-w-6xl mx-auto px-8 py-5 flex justify-between items-center">
+            <a href="#hero" class="text-md font-mono font-bold tracking-widest text-white hover:text-cyan-400 transition">
+                G.C.K <span class="text-cyan-400">//</span> SYSTEMS
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-xs font-mono uppercase tracking-widest">
+                <a href="#about" class="text-zinc-400 hover:text-white transition">01. About</a>
+                <a href="#skills" class="text-zinc-400 hover:text-white transition">02. Arsenal</a>
+                <a href="#projects" class="text-zinc-400 hover:text-white transition">03. Projects</a>
+                <a href="#contact" class="text-zinc-400 hover:text-white transition">04. Connect</a>
+            </div>
+            
+            <button id="menu-btn" class="md:hidden text-zinc-100 focus:outline-none">
+                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0b0e] border-b border-zinc-800 px-8 py-5 space-y-4 font-mono text-xs uppercase tracking-wider">
+            <a href="#about" class="block text-zinc-400 hover:text-white transition">01. About</a>
+            <a href="#skills" class="block text-zinc-400 hover:text-white transition">02. Arsenal</a>
+            <a href="#projects" class="block text-zinc-400 hover:text-white transition">03. Projects</a>
+            <a href="#contact" class="block text-zinc-400 hover:text-white transition">04. Connect</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="min-h-screen flex items-center justify-center pt-20 px-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(6,182,212,0.06),transparent_60%)]"></div>
+        <div class="max-w-4xl text-center z-10 space-y-6">
+            <p class="text-cyan-400 font-mono tracking-[0.35em] uppercase text-xs">Architecting Low-Latency Algorithms</p>
+            <h1 class="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none py-2">
+                Gandharva C Kulkarni
+            </h1>
+            <h2 class="text-lg md:text-2xl font-light text-zinc-400 max-w-2xl mx-auto balance leading-relaxed">
+                Computer Science Undergraduate & Aspiring Quantitative Systems Engineer.
+            </h2>
+            <div class="pt-8 flex flex-wrap justify-center gap-5 font-mono text-xs uppercase tracking-widest">
+                <a href="#projects" class="bg-white hover:bg-cyan-400 text-black font-bold px-8 py-4 transition-all duration-300 shadow-xl shadow-cyan-500/5">
+                    Explore Engine Modules
+                </a>
+                <a href="#contact" class="border border-zinc-700 hover:border-cyan-400 text-white font-medium px-8 py-4 transition-all duration-300">
+                    Initiate Contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-8 space-y-40 pb-40">
+
+        <section id="about" class="pt-12 scroll-mt-24">
+            <div class="grid md:grid-cols-3 gap-16 items-center">
+                <div class="md:col-span-2 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono text-cyan-500 tracking-widest uppercase block">01 / Profile</span>
+                        <h2 class="text-3xl font-extrabold text-white tracking-tight">Core Competency</h2>
+                    </div>
+                    <div class="space-y-6 text-zinc-400 text-md leading-relaxed font-light">
+                        <p>
+                            I am a first-year Computer Science undergraduate student focused on computational optimization, exploring the granular intersections between optimized hardware layer infrastructure and high-performance, low-latency execution algorithms.
+                        </p>
+                        <p>
+                            My exploration targets the structural designs of custom operating systems, low-level compilers, real-time market stream engines, and algorithmic control configurations. I prioritize deep logical structuring over abstraction.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative group mx-auto md:mx-0 max-w-[200px] aspect-square w-full">
+                    <div class="absolute inset-0 rounded-full border border-dashed border-zinc-700 group-hover:scale-110 group-hover:border-cyan-500/50 transition-all duration-700"></div>
+                    <div class="absolute inset-2 rounded-full border border-zinc-800 bg-zinc-900 flex items-center justify-center overflow-hidden p-1">
+                        <img src="profile.jpg" alt="Gandharva C Kulkarni" class="w-full h-full rounded-full object-cover grayscale opacity-90 group-hover:grayscale-0 transition-all duration-500" onerror="this.style.display='none'; document.getElementById('avatar-fallback').classList.remove('hidden')">
+                        <div id="avatar-fallback" class="hidden"><i class="fa-solid fa-user-astronaut text-4xl text-cyan-400"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="scroll-mt-24">
+            <div class="space-y-2 mb-12">
+                <span class="text-xs font-mono text-cyan-500 tracking-widest uppercase block">02 / Technical Architecture</span>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Engine Capabilities</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-800/40 border border-zinc-800/60 rounded-xl overflow-hidden">
+                <div class="skill-card bg-[#0e1015] p-8 hover:bg-[#12151c] cursor-default group">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition">Python Engine</h3>
+                        <i class="fa-brands fa-python text-xl text-zinc-600 group-hover:text-cyan-400 transition"></i>
+                    </div>
+                    <div class="subdomains text-xs text-zinc-500 font-mono space-y-1">
+                        <p class="text-cyan-400/80 font-bold mb-2">Subdomains:</p>
+                        <p>• Advanced Pandas Execution</p>
+                        <p>• Mathematical Numpy Modeling</p>
+                        <p>• Scikit-Learn Formulations</p>
+                        <p>• Interactive Pygame Systems</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-[#0e1015] p-8 hover:bg-[#12151c] cursor-default group">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition">Logic Engineering</h3>
+                        <i class="fa-solid fa-brain text-xl text-zinc-600 group-hover:text-cyan-400 transition"></i>
+                    </div>
+                    <div class="subdomains text-xs text-zinc-500 font-mono space-y-1">
+                        <p class="text-cyan-400/80 font-bold mb-2">Subdomains:</p>
+                        <p>• Low-Level Data Structures</p>
+                        <p>• Algorithmic Optimization</p>
+                        <p>• Complex Discrete Mathematics</p>
+                        <p>• Deterministic Problem Isolation</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-[#0e1015] p-8 hover:bg-[#12151c] cursor-default group">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-white group-hover:text-cyan-400 transition">Version Infrastructure</h3>
+                        <i class="fa-brands fa-git-alt text-xl text-zinc-600 group-hover:text-cyan-400 transition"></i>
+                    </div>
+                    <div class="subdomains text-xs text-zinc-500 font-mono space-y-1">
+                        <p class="text-cyan-400/80 font-bold mb-2">Subdomains:</p>
+                        <p>• Atomic Commit Stratification</p>
+                        <p>• Non-Linear Tree Branching</p>
+                        <p>• Production Git Workflows</p>
+                        <p>• Distributed Infrastructure Management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="scroll-mt-24">
+            <div class="space-y-2 mb-12">
+                <span class="text-xs font-mono text-cyan-500 tracking-widest uppercase block">03 / Production Builds</span>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Functional Engineering</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="border border-zinc-800/80 bg-[#0e1015]/40 hover:border-zinc-700 rounded-xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono tracking-widest text-cyan-500 border border-cyan-500/20 rounded-full px-3 py-1 bg-cyan-500/5">QUANT ARCHITECTURE</span>
+                            <a href="https://github.com/GandharvaK312/STONKS" target="_blank" class="text-zinc-500 hover:text-white text-md transition"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition">Predictive Stock Ranking Engine (NSE Energy)</h3>
+                        <div class="text-zinc-400 text-sm font-light space-y-3 leading-relaxed">
+                            <p>Developed the core predictive analytical engine (Module 2) for an automated portfolio ranking system focused on five primary energy sector stocks listed on the National Stock Exchange (NSE).</p>
+                            <p>The system ingestion pipeline extracts 5 years of historical financial data to compute momentum metrics and macroeconomic directional trends. A predictive Linear Regression model was implemented to project 5-day forward equity returns and systematically rank target securities.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-zinc-500 mt-8 pt-4 border-t border-zinc-800/60">
+                        <span>Linear Regression</span><span>Data Pipelines</span><span>Pandas</span>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800/80 bg-[#0e1015]/40 hover:border-zinc-700 rounded-xl p-8 flex flex-col justify-between transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono tracking-widest text-cyan-500 border border-cyan-500/20 rounded-full px-3 py-1 bg-cyan-500/5">STATISTICAL REGRESSION</span>
+                            <a href="https://github.com/GandharvaK312/Housing-Price-predictor" target="_blank" class="text-zinc-500 hover:text-white text-md transition"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition">Housing Price Regression Pipeline</h3>
+                        <div class="text-zinc-400 text-sm font-light space-y-3 leading-relaxed">
+                            <p>Engineered an end-to-end regression model deployed to the Kaggle competition platform, utilizing structural housing metrics to map data attributes to valuation projections.</p>
+                            <p>Built using a Random Forest regression configuration, the implementation phase prioritized deterministic data cleansing pipelines, strategic feature selection matrices, and out-of-sample prediction validation techniques.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-zinc-500 mt-8 pt-4 border-t border-zinc-800/60">
+                        <span>Random Forest</span><span>Data Cleansing</span><span>Kaggle Platform</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-24 border border-zinc-800/60 rounded-2xl bg-gradient-to-b from-[#0e1015] to-[#07080a] p-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent"></div>
+            <div class="max-w-xl mx-auto space-y-6 relative z-10">
+                <span class="text-xs font-mono text-cyan-500 tracking-widest uppercase block">04 / Node Connection</span>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Initiate Communication</h2>
+                <p class="text-zinc-400 font-light text-sm leading-relaxed">
+                    I am actively pursuing quantitative collaboration projects, low-level open-source initiatives, and engineering internship tracks.
+                </p>
+                <div class="pt-4">
+                    <a href="mailto:gandharvak2021@gmail.com" class="inline-block bg-cyan-500 hover:bg-cyan-400 font-mono text-xs uppercase font-bold tracking-widest text-black px-10 py-5 transition-all duration-300">
+                        gandharvak2021@gmail.com
+                    </a>
+                </div>
+                
+                <div class="flex justify-center space-x-8 pt-6 text-zinc-500 text-lg">
+                    <a href="https://github.com/GandharvaK312" target="_blank" class="hover:text-cyan-400 transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gandharva-kulkarni-8b0b5a36a/" target="_blank" class="hover:text-cyan-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 border-t border-zinc-900 bg-[#07080a] text-center text-[10px] font-mono text-zinc-600 tracking-widest uppercase">
+        <p>System Engine Deployment &copy; 2026 // Designed by Gandharva</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
