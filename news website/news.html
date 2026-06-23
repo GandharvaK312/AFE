@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CHRONICLE // Real-Time Global Intelligence</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#090a0f] text-zinc-100 font-sans antialiased selection:bg-amber-400 selection:text-black">
+
+    <!-- Top Ticker Bar -->
+    <div class="bg-amber-400 text-black text-xs font-mono uppercase font-bold tracking-widest py-2 px-4 flex items-center overflow-hidden border-b border-black">
+        <span class="bg-black text-amber-400 px-2 py-0.5 text-[10px] mr-4 shrink-0 animate-pulse">FLASH RELEASES</span>
+        <div class="whitespace-nowrap animate-marquee flex gap-12">
+            <span>• LATENCY OPTIMIZATION BREAKTHROUGHS ALTERING QUANTITATIVE HIGH-FREQUENCY STRATEGIES</span>
+            <span>• MACROECONOMIC INDICATORS SIGNAL SHIFTS ACROSS ASIAN ENERGY MARKETS</span>
+            <span>• COMPILER DESIGN INNOVATIONS DRIVING EMBEDDED SYSTEMS SCALE EFFICIENCIES</span>
+        </div>
+    </div>
+
+    <!-- Editorial Header Area -->
+    <header class="border-b border-zinc-800 bg-[#090a0f]/90 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Branding -->
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl font-serif font-black tracking-tighter text-white">
+                    THE CHRONICLE
+                </h1>
+                <p class="text-[10px] font-mono tracking-widest text-zinc-500 uppercase mt-0.5">
+                    Live Telemetry Ingestion Network // Edition 2026
+                </p>
+            </div>
+
+            <!-- Global Category Switcher Controls -->
+            <nav id="category-menu" class="flex flex-wrap justify-center gap-2 font-mono text-xs uppercase tracking-wider">
+                <button data-cat="general" class="cat-btn px-4 py-2 bg-white text-black font-bold border border-white">General</button>
+                <button data-cat="technology" class="cat-btn px-4 py-2 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-600 transition">Technology</button>
+                <button data-cat="business" class="cat-btn px-4 py-2 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-600 transition">Business</button>
+                <button data-cat="science" class="cat-btn px-4 py-2 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-600 transition">Science</button>
+                <button data-cat="sports" class="cat-btn px-4 py-2 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-600 transition">Sports</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Live Feed Container -->
+    <main class="max-w-7xl mx-auto px-6 py-10 space-y-12">
+        
+        <!-- Live Status / Telemetry bar -->
+        <div class="flex justify-between items-center border-b border-zinc-800 pb-4 font-mono text-xs text-zinc-500">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span>FEED STATUS: <span class="text-zinc-300 font-bold">CONNECTED</span></span>
+            </div>
+            <div id="feed-timestamp">SYNCHRONIZING TARGET DATA NODES...</div>
+        </div>
+
+        <!-- Skeleton Loader Matrix -->
+        <div id="skeleton-loader" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4 animate-pulse"><div class="bg-zinc-800 h-48 w-full rounded"></div><div class="h-4 bg-zinc-800 w-3/4 rounded"></div><div class="h-4 bg-zinc-800 w-1/2 rounded"></div></div>
+            <div class="space-y-4 animate-pulse md:block hidden"><div class="bg-zinc-800 h-48 w-full rounded"></div><div class="h-4 bg-zinc-800 w-3/4 rounded"></div><div class="h-4 bg-zinc-800 w-1/2 rounded"></div></div>
+            <div class="space-y-4 animate-pulse md:block hidden"><div class="bg-zinc-800 h-48 w-full rounded"></div><div class="h-4 bg-zinc-800 w-3/4 rounded"></div><div class="h-4 bg-zinc-800 w-1/2 rounded"></div></div>
+        </div>
+
+        <!-- Dynamic News Ingestion Grid Layout -->
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden">
+            <!-- JavaScript Engine structurally renders components here -->
+        </div>
+    </main>
+
+    <!-- Footer Terminal Link -->
+    <footer class="py-12 border-t border-zinc-900 bg-[#050608] text-center text-[10px] font-mono text-zinc-600 tracking-widest uppercase">
+        <p>THE CHRONICLE INTELLIGENCE PIPELINE // DATA INGESTION ENGINE ACTIVE</p>
+    </footer>
+
+    <!-- CSS Marquee Animation Utility -->
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <!-- Async Network Request Ingestion Script -->
+    <script>
+        // Utilizing GNews API as a resilient CORS-enabled client-side platform
+        // Fetch your own free token key if this demonstration stream hits threshold limits
+        const API_KEY = 'cfa4f3b7a3bfa221deddd7559c6893a9'; 
+        let currentCategory = 'general';
+
+        const newsGrid = document.getElementById('news-grid');
+        const skeletonLoader = document.getElementById('skeleton-loader');
+        const feedTimestamp = document.getElementById('feed-timestamp');
+
+        // Core Async Data Fetch Function
+        async function fetchLiveNews() {
+            // Activate Loading State Visuals
+            newsGrid.classList.add('hidden');
+            skeletonLoader.classList.remove('hidden');
+            
+            const endpoint = `https://gnews.io/api/v4/top-headlines?category=${currentCategory}&lang=en&country=us&max=9&apikey=${API_KEY}`;
+            
+            try {
+                const response = await fetch(endpoint);
+                if (!response.ok) throw new Error('Network latency check failed or threshold maxed.');
+                
+                const data = await response.json();
+                renderNewsGrid(data.articles);
+                
+                // Update Timestamp Metas
+                const now = new Date();
+                feedTimestamp.innerText = `LAST DATA BUFFER SYNC: ${now.toLocaleTimeString()}`;
+            } catch (error) {
+                console.error(error);
+                newsGrid.innerHTML = `
+                    <div class="col-span-full border border-red-950/40 bg-red-950/10 p-8 rounded-lg text-center text-sm font-mono text-red-400">
+                        <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 block"></i>
+                        Data Pipeline Exception: Failed to ingest active remote targets. Please verify API limits.
+                    </div>
+                `;
+                skeletonLoader.classList.add('hidden');
+                newsGrid.classList.remove('hidden');
+            }
+        }
+
+        // Structural Dom Generation Engine
+        function renderNewsGrid(articles) {
+            newsGrid.innerHTML = '';
+            
+            if (!articles || articles.length === 0) {
+                newsGrid.innerHTML = `<p class="col-span-full font-mono text-center text-zinc-500">No active reports inside this partition matrix.</p>`;
+                return;
+            }
+
+            articles.forEach((article, index) => {
+                // Formatting neat timestamps
+                const pubDate = new Date(article.publishedAt).toLocaleDateString('en-US', {
+                    month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                });
+
+                // Isomorphic layouts: give item zero editorial structural prominence (Headline Feature Card)
+                const isFeature = index === 0;
+
+                const cardHtml = `
+                    <article class="border border-zinc-800/80 bg-[#0e1015]/40 hover:border-zinc-600 rounded-xl overflow-hidden flex flex-col justify-between transition-all duration-300 group ${isFeature ? 'md:col-span-3 md:flex-row' : ''}">
+                        
+                        <!-- Media Container Layout -->
+                        <div class="relative overflow-hidden shrink-0 ${isFeature ? 'md:w-1/2 aspect-video md:aspect-auto' : 'aspect-video'} bg-zinc-900">
+                            <img src="${article.image || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600'}" 
+                                 alt="News Visual" 
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                                 onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600'">
+                            <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-[10px] font-mono uppercase font-bold tracking-widest text-amber-400 px-3 py-1 border border-zinc-800">
+                                ${article.source.name || 'INTEL'}
+                            </span>
+                        </div>
+
+                        <!-- Content Content Elements -->
+                        <div class="p-6 flex flex-col justify-between flex-1 gap-6">
+                            <div class="space-y-3">
+                                <span class="text-[10px] font-mono text-zinc-500 block uppercase tracking-wider">${pubDate}</span>
+                                <h3 class="${isFeature ? 'text-2xl md:text-3xl' : 'text-lg'} font-bold text-white tracking-tight leading-snug group-hover:text-amber-400 transition line-clamp-3">
+                                    ${article.title}
+                                </h3>
+                                <p class="text-zinc-400 font-light text-xs leading-relaxed line-clamp-3">
+                                    ${article.description || 'Access target node vector linkage directly to review live analytics data drops containing raw text specifications.'}
+                                </p>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-zinc-800/60 flex justify-between items-center font-mono text-xs">
+                                <a href="${article.url}" target="_blank" class="text-white hover:text-amber-400 flex items-center gap-2 transition group/link">
+                                    ACCESS REPORT <i class="fa-solid fa-arrow-up-right-from-square text-[10px] transition group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+                newsGrid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+
+            // Swap Visibility
+            skeletonLoader.classList.add('hidden');
+            newsGrid.classList.remove('hidden');
+        }
+
+        // Category Menu Interactivity Routing Manager
+        document.getElementById('category-menu').addEventListener('click', (e) => {
+            const clickedBtn = e.target.closest('.cat-btn');
+            if (!clickedBtn || clickedBtn.dataset.cat === currentCategory) return;
+
+            // Update DOM Styles
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.className = "cat-btn px-4 py-2 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-600 transition";
+            });
+            clickedBtn.className = "cat-btn px-4 py-2 bg-white text-black font-bold border border-white";
+
+            // Trigger State Reload
+            currentCategory = clickedBtn.dataset.cat;
+            fetchLiveNews();
+        });
+
+        // Initialize Application
+        fetchLiveNews();
+    </script>
+</body>
+</html>
