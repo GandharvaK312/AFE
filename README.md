@@ -27,7 +27,3 @@ A high-fidelity, client-side news ecosystem designed with an editorial, premium 
 ## 📡 API Management Note
 
 This repository runs on client-side requests. Because public keys have a structural threshold budget of **100 request tokens per day** (where 1 token = 1 full page load, refresh, or category switch across all concurrent global users), the system is configured to auto-switch to a cached mock database when limits are exceeded. 
-
-To utilize your own unrestricted live data buffer line:
-1. Generate a free personal token key at [GNews.io](https://gnews.io/).
-2. Open `index.html` and update the environment variable:
